@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: front-end-container
-        image: yashparmar04/production
+        image: yashparmar04/production:prolatest
         ports:
         - containerPort: 80
