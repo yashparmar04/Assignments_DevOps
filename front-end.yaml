@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: front-end-container
-        image: yashparmar04/development
+        image: yashparmar04/development:devlatest
         ports:
         - containerPort: 80
