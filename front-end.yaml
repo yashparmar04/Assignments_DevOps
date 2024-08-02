@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: front-end-container
-        image: yashparmar04/development
+        image: yashparmar04/development:latest
         ports:
         - containerPort: 80
 
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: front-service
+  name: development-service
 spec:
   selector:
     app: nginx
