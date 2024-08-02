@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Front-End
+metadata:
+  name: front-end
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: front-end
+  template:
+    metadata:
+      labels:
+        app: front-end
+    spec:
+      containers:
+      - name: front-end-container
+        image: yashparmar04/yash:1.1
+        ports:
+        - containerPort: 80
