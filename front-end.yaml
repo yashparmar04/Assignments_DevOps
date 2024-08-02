@@ -1,5 +1,6 @@
-apiVersion: apps/v1
-kind: Front-End
+---
+apiVersion: app/v1
+kind: front-end
 metadata:
   name: front-end
 spec:
@@ -14,6 +15,21 @@ spec:
     spec:
       containers:
       - name: front-end-container
-        image: yashparmar04/testing
+        image: yashparmar04/testing:latest
         ports:
         - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30081
+  type: NodePort
